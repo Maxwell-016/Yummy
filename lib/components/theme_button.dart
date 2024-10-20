@@ -8,10 +8,11 @@ class ThemeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final isBright = Theme.of(context).brightness == Brightness.light;
     return IconButton(
-      onPressed: () => changeThemeMode(!isBright),
       icon: isBright
           ? const Icon(Icons.dark_mode_outlined)
           : const Icon(Icons.light_mode_outlined),
+
+      onPressed: () => changeThemeMode(!isBright),
     );
   }
 }
